@@ -1,45 +1,55 @@
-const colors = ['deepskyblue', 'orange', 'firebrick', 'gold', 'magenta', 'black', 'darkblue'];
+(function
 
-const navSelector = '[c-hover-after]';
-const linkSelector = `${ navSelector } > * > a`;
-const targetSelector = `${ navSelector } > span`;
+() {
 
-Array.from(
-	document.querySelectorAll(navSelector)
-).forEach(
-	(menu) => {
-		const target = menu.querySelector(targetSelector);
+  const target = document.querySelector(".target");
+  const links = document.querySelectorAll(".mynav a");
+  const colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
 
-		menu.addEventListener('focusin', onenter);
-		menu.addEventListener('pointerover', onenter);
+  function mouseenterFunc() {
+    if (!this.parentNode.classList.contains("active")) {
+      for (let i = 0; i < links.length; i++) {
+        if (links[i].parentNode.classList.contains("active")) {
+          links[i].parentNode.classList.remove("active");
+        }
+        links[i].style.opacity = "0.25";
+      }
 
-		window.addEventListener('resize', onresize);
+      this.parentNode.classList.add("active");
+      this.style.opacity = "1";
 
-		function onenter(event) {
-			const target = event.target.closest(linkSelector);
+      const width = this.getBoundingClientRect().width;
+      const height = this.getBoundingClientRect().height;
+      const left = this.getBoundingClientRect().left + window.pageXOffset;
+      const top = this.getBoundingClientRect().top + window.pageYOffset;
+      const color = colors[Math.floor(Math.random() * colors.length)];
 
-			if (target) {
-				styleTargetBy(target);
-			}
-		}
+      target.style.width = `${width}px`;
+      target.style.height = `${height}px`;
+      target.style.left = `${left}px`;
+      target.style.top = `${top}px`;
+      target.style.borderColor = color;
+      target.style.transform = "none";
+    }
+  }
 
-		function onresize() {
-			if (document.activeElement.closest(linkSelector)) {
-				styleTargetBy(document.activeElement);
-			} else {
-				target.style.width = '';
-			}
-		}
+  for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", (e) => e.preventDefault());
+    links[i].addEventListener("mouseenter", mouseenterFunc);
+  }
 
-		function styleTargetBy(source) {
-			const rect = source.getBoundingClientRect();
+  function resizeFunc() {
+    const active = document.querySelector(".mynav li.active");
 
-			target.style.width = `${ rect.width }px`;
-			target.style.height = `${ rect.height }px`;
-			target.style.left = `${ rect.left + window.pageYOffset }px`;
-			target.style.top = `${ rect.top + window.pageYOffset }px`;
-			target.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
-			target.style.transform = 'none';
-		}
-	}
-);
+    if (active) {
+      const left = active.getBoundingClientRect().left + window.pageXOffset;
+      const top = active.getBoundingClientRect().top + window.pageYOffset;
+
+      target.style.left = `${left}px`;
+      target.style.top = `${top}px`;
+    }
+  }
+
+  window.addEventListener("resize", resizeFunc);
+
+})();
