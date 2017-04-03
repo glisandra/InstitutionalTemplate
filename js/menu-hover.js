@@ -33,9 +33,16 @@
     }
   }
 
+  function mouseleaveFunc () {
+    for (let i = 0; i < links.length; i++) {
+      links[i].style.opacity = "1.0";
+    }
+  }
+
   for (let i = 0; i < links.length; i++) {
     links[i].addEventListener("click", (e) => e.preventDefault());
     links[i].addEventListener("mouseenter", mouseenterFunc);
+    links[i].addEventListener("mouseleave", mouseleaveFunc);
   }
 
   function resizeFunc() {
