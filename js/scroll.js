@@ -1,6 +1,6 @@
 function smoothScroll(target, time) {
 	// var margin = ($('#main-header').outerHeight() - 1);]
-	var margin = 0;
+	var margin = 400;
 	if (!time) { time = '1000'; }
 
 	if (target === 'toTop') {
@@ -32,7 +32,8 @@ function smoothScroll(target, time) {
 		$this.css({
 			position: 'fixed',
 			top: top,
-			right: right
+			right: right,
+			zIndex: 900
 		})
 		.animate({
 			right: '5%',
