@@ -51,7 +51,6 @@ h2 {
 
 p {
     color: #111;
-    font-family: "Josefin Sans",sans-serif;
     font-size: 16pt;
     font-style: normal;
     line-height: 32px;
@@ -80,3 +79,138 @@ p {
 .btn {
             z-index: 0 !important;
     }
+    
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+/*************** MENU DO TOPO *******************/
+header .menu-total.initial {
+    -webkit-transition: margin .6s linear;
+    transition: margin .6s linear;
+    margin-top: 0;
+}
+
+header .menu-total .main-menu {
+    z-index: 99;
+    height: 100px;
+    padding: 15px 0;
+    margin-top: 0;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+header .menu-total {
+    position: fixed;
+    margin-top: -100px;
+    height: 100px;
+    width: 100%;
+    z-index: 8;
+    background: rgba(255,255,255,.85);
+    -webkit-transition: margin .6s linear;
+    transition: margin .6s linear;
+}
+
+.wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 .9375em;
+}
+
+header .menu-total .logo {
+    position: relative;
+    width: 20%;
+    display: inline-block;
+    z-index: 999;
+    padding: 0;
+    margin: 0;
+    margin-top: -7px;
+}
+
+header .menu-total .main-menu menu {
+    background: 0 0;
+    position: relative;
+    z-index: 9999;
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 0;
+    float: right;
+    margin-top: 25px;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+header .menu-total .main-menu menu menuitem {
+    display: inline-block;
+    margin: 0 15px;
+    text-align: right;
+}
+
+header .menu-total .main-menu .menu-mobile {
+    display: none;
+}
+@media screen and (max-width:760px) {
+header .menu-total .main-menu .menu-mobile {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 33px;
+    height: 23px;
+    float: right;
+    margin-top: 35px;
+    margin-right: 25px;
+    color: #1e3b7f;
+}
+}
+
+header .menu-total .main-menu menu menuitem a:hover {
+    text-decoration: underline;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+header .menu-total .main-menu menu menuitem a {
+    text-decoration: none;
+    color: #1e3b7f;
+    font-family: Lato,Arial,sans-serif;
+
+    font-weight: 700;
+    text-transform: uppercase;
+}

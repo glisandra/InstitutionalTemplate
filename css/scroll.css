@@ -10,9 +10,6 @@ h1, h2 {
   opacity: 0;
 }
 
-.wrapper {
-  max-width: 600px;
-  margin: 0 auto; }
 
 #hero {
   text-align: center;

@@ -3,25 +3,66 @@
 
 <head>
     <title>Insert Title</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+    </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/presentation.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/scroll.css">
     <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="css/typed.css">
     <meta charset="utf-8">
 </head>
 
 <body>
-    <div class="content-section video-section outer-container" id="#main-header">
+    <!--<div class="content-section video-section outer-container homepage-hero-module" id="#main-header">
         <div class="pattern-overlay inner-container">
             <div class="video-overlay hidden-xs">
                 <h2>How we work</h2>
                 <p>Understanding the need for exceptional customer service from booking to completion.</p>
                 <a href="#services" class="btn" id="more-video">Find out more</a>
             </div>
-            <span class="target"></span>
             <video width="100%" height="100%" autoplay loop muted>
                 <source src="videos/MP4/Working-Space.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </div>-->
+    <header class="site-header home" role="banner">
+    <div class="menu-total initial">
+        <div class="wrapper">
+            <div class="main-menu">
+                <!--<div class="logo">
+                    <a href="http://www.servicescobrancas.com.br">
+                        <img src="http://www.lcto.lu/themes/lcto/images/placeholder_120x95.gif" class="logo-img">
+                    </a>
+                </div>-->
+                <menu class="menu">
+                    <menuitem><a href="?page_id=4">Home</a></menuitem>
+                    <menuitem><a href="?page_id=56">O grupo</a></menuitem>
+                    <menuitem><a href="?page_id=101">Soluções</a></menuitem>
+                    <menuitem><a href="?page_id=130">Trabalhe conosco</a></menuitem>
+                    <menuitem><a href="?page_id=160">Contato</a></menuitem>
+                </menu>
+                <a class="menu-mobile" href="#">
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    </header>
+    <div class="homepage-hero-module">
+        <div class="video-container">
+            <div class="inner-text">
+                <p class="p1">Alpha</p>
+                <p class="p2">Confiança</p>
+            </div>
+            <div class="filter"></div>
+            <video autoplay loop class="fillWidth">
+                <source src="videos/MP4/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="videos/WEBM//Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
             </video>
         </div>
     </div>
@@ -103,9 +144,22 @@
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD2toBwOt0Vthvgy5Cwe4-RB4X0Rg2CcHI&callback=initialize"></script>
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
     <script type="text/javascript" src="js/scroll.js"></script>
-    <script type="text/javascript" src="js/video.js"></script>
-    <script src="js/jquery.waypoints.js"> </script>
-    <script src="js/animations.js"> </script>
+    <script src="js/jquery.waypoints.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/typed.js"></script>
+    <script>
+                                             $(function () {
+                                                 $(".p2").typed({
+                                                     strings: ["Confiança", "Competência", "Contabilidade"],
+                                                     typeSpeed: 50,
+                                                     backSpeed: 10,
+                                                     backDelay: 2000,
+                                                     showCursor: false,
+                                                     loop: false
+                                                 });
+                                             });
+    </script>
 </body>
 
 </html>
