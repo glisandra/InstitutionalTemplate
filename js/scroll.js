@@ -1,6 +1,6 @@
 function smoothScroll(target, time) {
 	// var margin = ($('#main-header').outerHeight() - 1);]
-	var margin = 0;
+	var margin = ($('.menu-total').outerHeight() - 1);
 	if (!time) { time = '1000'; }
 
 	if (target === 'toTop') {

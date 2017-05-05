@@ -8,9 +8,12 @@ $(document).ready(function () {
     $('#three').addClass('hideElement');
     $('#four').addClass('hideElement');
 
-    $('#one').waypoint(function () {
-        $('#one').addClass('zoomIn').removeClass('hideElement');
-    }, { offset: '50%' });
+    $('#itemOne').waypoint(function () {
+        $('#one').removeClass('hideElement');
+        $('#itemOne').addClass('slideInUp').removeClass('hideElement');
+        $('#itemTwo').addClass('slideInUp').removeClass('hideElement');
+        $('#itemThree').addClass('slideInUp').removeClass('hideElement');
+    }, { offset: '30%' });
 
     $('#two').waypoint(function () {
         $('#two').addClass('zoomIn').removeClass('hideElement');

@@ -1,0 +1,167 @@
+ul {
+    list-style: none;
+}
+.item-list-right li, .item-list-left li {
+    position: relative;
+}
+.item-list-right li {
+    padding: 0 75px 60px 45px;
+    text-align: right;
+}
+.item-list-left li {
+    padding: 0 45px 60px 75px;
+    text-align: left;
+}
+.item-list-center li {
+    padding: 0 40px 60px;
+    text-align: center;
+}
+.item-list-border li {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 40px;
+    /*transition: all 0.25s ease-in-out 0s;*/
+}
+.item-list-border-alt li {
+    background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
+}
+.dark-bg .item-list-border-alt li {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+}
+.item-list-border li:hover {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.dark-bg .item-list-border li {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dark-bg .item-list-border li:hover {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.item-list-border li .big-icon {
+    font-size: 48px;
+    opacity: 0.5;
+}
+.item-list li {
+    padding-bottom: 60px;
+}
+.item-list-small li {
+    padding-bottom: 30px;
+}
+.item-list-right li .icon, .item-list-left li .icon {
+    color: #00c0ff;
+    display: inline-block;
+    font-size: 48px;
+    position: absolute;
+    top: 0;
+}
+.item-list-right li .img-icon, .item-list-left li .img-icon {
+    display: inline-block;
+    height: auto;
+    max-width: 50px;
+    position: absolute;
+    top: 0;
+}
+.item-list-right li .num-icon, .item-list-left li .num-icon {
+    border: 1px solid #00c0ff;
+    border-radius: 50%;
+    color: #00c0ff;
+    display: inline-block;
+    font-size: 22px;
+    font-style: normal;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+}
+.item-list-right li .icon, .item-list-right li .img-icon, .item-list-right li .num-icon {
+    right: 0;
+}
+.item-list-left li .icon, .item-list-left li .img-icon, .item-list-left li .num-icon {
+    left: 0;
+}
+.item-list-center li .icon, .item-list-center li img {
+    color: #00c0ff;
+    display: inline-block;
+    font-size: 64px;
+    margin: 0 0 20px;
+}
+.item-list-right h3, .item-list-left h3, .item-list-center h3 {
+    margin: 0 0 25px;
+}
+.item-list-right h3:last-child, .item-list-left h3:last-child, .item-list-center h3:last-child {
+    margin: 0;
+}
+.item-list-right h4, .item-list-left h4, .item-list-center h4 {
+    margin: 0 0 15px;
+}
+.item-list-right.item-list-big li {
+    padding: 0 80px 100px 30px;
+}
+.item-list-left.item-list-big li {
+    padding: 0 30px 60px 100px;
+}
+.item-list-big li .icon {
+    font-size: 32px;
+}
+.item-list-right li:last-child, .item-list-left li:last-child, .item-list-center li:last-child, .item-list li:last-child {
+    padding-bottom: 0 !important;
+}
+.dark-bg .item-list-right p, .dark-bg .item-list-left p, .dark-bg .item-list-center p {
+    opacity: 0.8;
+}
+@media (max-width: 992px) {
+.item-list-right h3, .item-list-left h3 {
+    margin: 0 0 10px;
+}
+.item-list-left li .icon, .item-list-right li .icon, .item-list-left li .img-icon, .item-list-right li .img-icon, .item-list-left li .num-icon, .item-list-right li .num-icon {
+    margin: 0 0 20px;
+    position: relative;
+}
+.item-list-left li .img-icon, .item-list-right li .img-icon {
+    max-width: 50%;
+}
+.item-list-left li, .item-list-right li, .item-list li {
+    padding: 0 20px 40px;
+    text-align: center;
+}
+}
+
+#itemOne {
+    -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+
+#itemTwo {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -o-animationt-duration: 0.3s;
+   animation-duration: 0.3s;
+
+}
+
+#itemThree {
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+vide {
+    z-index: 400;
+}
