@@ -6,7 +6,7 @@ function setPosition(x, y) {
     // Exibir mapa;
     var myLatlng = new google.maps.LatLng(x, y);
     var mapOptions = {
-        zoom: 18
+        zoom: 17
         , center: myLatlng
         , panControl: false
         , scrollwheel: false
@@ -19,8 +19,8 @@ function setPosition(x, y) {
     //Parâmetros do texto que será exibido no clique;
     var contentString = '<h2>Alpha Estratégias Contábeis</h2>' + '<p>Rua Barão de Itapetininga nº 50 Conj. 802, sala 2</p>';
     var infowindow = new google.maps.InfoWindow({
-        content: contentString
-        , maxWidth: 700
+        content: contentString, 
+        maxWidth: 700
     });
 
     // Exibir o mapa na div #mapa;

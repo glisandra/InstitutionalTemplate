@@ -13,26 +13,45 @@
 </head>
 
 <body>
-    <header class="site-header home" role="banner" id="sitebanner">
+    <!--<header class="site-header home" role="banner" id="sitebanner">
         <div class="menu-total initial">
             <div class="wrapper">
-                <div class="main-menu">
-                    <!--<div class="logo">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">products_crud</a>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+                                <li><a asp-area="" asp-controller="Categories" asp-action="Index">Categories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!--<div cl <div class="main-menu">-->
+    <!--<div class="logo">
                     <a href="http://www.servicescobrancas.com.br">
                         <img src="http://www.lcto.lu/themes/lcto/images/placeholder_120x95.gif" class="logo-img">
                     </a>
                 </div>-->
-                    <menu class="menu">
-                        <menuitem><a href="#sitebanner">Home</a>
-                        </menuitem>
-                        <menuitem><a href="#one">Serviços</a>
-                        </menuitem>
-                        <menuitem><a href="#two">O grupo</a>
-                        </menuitem>
-                        <menuitem><a href="#three">Clientes</a>
-                        </menuitem>
-                        <menuitem><a href="#four">Contato</a>
-                        </menuitem>
+    <!--<menu class="menu">
+                        <li><a href="#sitebanner">Home</a>
+                        </li>
+                        <li><a href="#one">Serviços</a>
+                        </li>
+                        <li><a href="#two">O grupo</a>
+                        </li>
+                        <li><a href="mailto:alpha-consultores@uol.com.br">Mande um email</a>
+                        </li>
+                        <li><a href="#four">Contato</a>
+                        </li>
                     </menu>
                     <a class="menu-mobile" href="#">
                         <span class="span1"></span>
@@ -42,7 +61,34 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header>-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Alpha Contabilidade</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#sitebanner">Home</a>
+                    </li>
+                    <li><a href="#one">Serviços</a>
+                    </li>
+                    <li><a href="#two">O grupo</a>
+                    </li>
+                    <li><a href="mailto:alpha-consultores@uol.com.br">Mande um email</a>
+                    </li>
+                    <li><a href="#four">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="homepage-hero-module">
         <div class="video-container">
             <div class="inner-text">
@@ -142,8 +188,7 @@
                 </div>
             </div>
         </section>
-
-        <section>
+        <section id="two">
             <div class="img2 os-animation animated fadeIn" data-os-animation="fadeIn" data-os-animation-delay="0s" style="animation-delay: 1s;">
                 <div class="video-overlay hidden-xs os-animation" data-os-animation="slideInLeft" data-os-animation-delay="0s">
                     <h2 style="font-size:20px;margin-bottom:20px">Quem somos</h2>
@@ -168,27 +213,14 @@
                 </div>
             </div>
         </section>
-
-        <section id="three" class="animated">
-            <h2>Section Three</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus non nostrum ut aut ab dolorem, dolorum voluptas
-                expedita dolor maxime adipisci, fugit est error similique, ducimus! Aut debitis at omnis.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus non nostrum ut aut ab dolorem, dolorum voluptas
-                expedita dolor maxime adipisci, fugit est error similique, ducimus! Aut debitis at omnis.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus non nostrum ut aut ab dolorem, dolorum voluptas
-                expedita dolor maxime adipisci, fugit est error similique, ducimus! Aut debitis at omnis.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus non nostrum ut aut ab dolorem, dolorum voluptas
-                expedita dolor maxime adipisci, fugit est error similique, ducimus! Aut debitis at omnis.</p>
-        </section>
-
         <section id="four" class="animated">
-            <h2>Contato</h2>
-            <div class="topoContato" id="mapa"></div>
+            <h1>Venha tomar um café com a gente</h1>
+            <div class="topoContato" style="height:480px;" id="mapa"></div>
             <div class="internoContato">
                 <div class="row">
                     <div class="col-xs-12 col-md-6 col-lg-6">
                         <h3>São Paulo</h3>
-                        <a href="#" onclick="setPosition(-23.545320, -46.639534)" class="vejaMais">
+                        <a style="cursor:pointer;" onclick="setPosition(-23.545320, -46.639534)" class="vejaMais">
                             <span>Ver no Mapa</span>
                             <span class="vejaMaisIcon"></span>
                         </a>
@@ -199,7 +231,7 @@
                     </div>
                     <div class="col-xs-12 col-md-6 col-lg-6">
                         <h3>Itapecerica da Serra</h3>
-                        <a href="#" onclick="setPosition(-23.721677, -46.851948)" class="vejaMais">
+                        <a style="cursor:pointer;" onclick="setPosition(-23.721677, -46.851948)" class="vejaMais">
                             <span>Ver no Mapa</span>
                             <span class="vejaMaisIcon"></span>
                         </a>
@@ -217,10 +249,12 @@
     <script type="text/javascript" src="js/mapa.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD2toBwOt0Vthvgy5Cwe4-RB4X0Rg2CcHI&callback=initialize"></script>
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="js/jquery.waypoints.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/video.js"></script>
     <script src="js/typed.js"></script>
+    <script src="js/clicktoscroll.js"></script>
     <script>
         $(function () {
             $(".p2").typed({
