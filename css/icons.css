@@ -141,7 +141,7 @@ video {
 }
 
 .backgroundCards {
-    background:rgba(1, 41, 95, 0.9);
+    background:#fdfffc;
     position: relative;
 }
 
@@ -165,7 +165,7 @@ video {
 }
 
 .img2 {
-    height: 500px;
+    height: 640px;
     background: url(https://unsplash.imgix.net/photo-1422513391413-ddd4f2ce3340?dpr=2&fit=crop&fm=jpg&q=75&w=1050) no-repeat center center/cover;
     background-attachment: fixed;
 }
